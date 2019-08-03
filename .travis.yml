@@ -6,6 +6,8 @@ script: yarn lint && yarn lint:css && yarn test:ci && yarn build
 deploy:
   provider: heroku
   api_key:
-    secure:
+    secure: Ygk9fii3ZNZcqQr8IwTnIi9GzK3oOGe5oPB1YgC4yEic/giOZXSlMENhhWJzlu2D31QGE55wR0wQfvKEielYSqDf/0xh+qnc7H1KkyHJLcuTpfZKSpNfPFylMaTHpCNFuDFvaKtA5MrteNFrtMJfs6YmQc/ec0cLux2njki9jXkUDaqf1tyKjjOlh7+VTKSEWQ/0yDHD6Jb8t1+7IjrukHq3nvwoBIQVkdSHi+kNlYtF5d6fUOJjpySjMj1e0XHiAtMLfEIyx80mXF7rQWzyvmDL6/3WwGNtT4RAEU+Oe6UL1aMz8Xpco6jquKOYALjWIPhvIdbzSFXYq2icbN6BAhq9YUE1el0M/tZGmByxqvxNqs8+EyS7B/6x/82TBdV4a4QQDP58SeDggSBnZj2KXPOm9gC2jqhQMKZyhQEO4aIJWmMj8mQlEz3SYA+tZucQ4m5lZfUOmJ7qE1IkKSA2v0JH50FJ3VrtIsj9s48+imwjukCJ0egCdzmMiS2dwYaddCB9vVX2f1zHeiz+ydY6mCigTWfFzPjmoeL2qjmME69Fserf28THnlNE2EjlQ4N8Ouu7EKimUo48zXQ9LV9xCzs/kMoiOYIcMLzr1HOJf/kACeivegZufYO7vpA4ilY4rv4gZfqpbO2++qs5VxTq5zc84bqr4OXk88dfdaJcva4=
   app:
     master: js-books-staging
+  on:
+    repo: olga-krasnova/js-books
