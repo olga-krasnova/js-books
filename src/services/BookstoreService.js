@@ -5,11 +5,7 @@ export default class BookstoreService {
     this.apiService = apiService;
   }
 
-  async fetchBooks() {
-    const result = await this.apiService
-      .get(apiUrl)
-      .then(response => response);
-
-    return result.data.books;
-  };
+  fetchBooks() {
+    return this.apiService.get(apiUrl);
+  }
 }

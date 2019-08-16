@@ -6,7 +6,7 @@ export default {
       isbn13: '9780321812186',
       price: '$21.99',
       image: 'https://itbook.store/img/books/9780321812186.png',
-      url: 'https://itbook.store/books/9780321812186'
+      url: 'https://itbook.store/books/9780321812186',
     },
     {
       title: 'Learning JavaScript',
@@ -14,7 +14,7 @@ export default {
       isbn13: '9780321832740',
       price: '$8.99',
       image: 'https://itbook.store/img/books/9780321832740.png',
-      url: 'https://itbook.store/books/9780321832740'
+      url: 'https://itbook.store/books/9780321832740',
     },
     {
       title: 'JavaScript: The Good Parts',
@@ -22,15 +22,15 @@ export default {
       isbn13: '9780596517748',
       price: '$6.68',
       image: 'https://itbook.store/img/books/9780596517748.png',
-      url: 'https://itbook.store/books/9780596517748'
+      url: 'https://itbook.store/books/9780596517748',
     },
     {
       title: 'Head First JavaScript',
-      subtitle: 'A Learner\'s Companion to JavaScript',
+      subtitle: "A Learner's Companion to JavaScript",
       isbn13: '9780596527747',
       price: '$5.99',
       image: 'https://itbook.store/img/books/9780596527747.png',
-      url: 'https://itbook.store/books/9780596527747'
+      url: 'https://itbook.store/books/9780596527747',
     },
     {
       title: 'JavaScript Creativity',
@@ -38,7 +38,7 @@ export default {
       isbn13: '9781430259442',
       price: '$37.95',
       image: 'https://itbook.store/img/books/9781430259442.png',
-      url: 'https://itbook.store/books/9781430259442'
+      url: 'https://itbook.store/books/9781430259442',
     },
     {
       title: 'JavaScript for PHP Developers',
@@ -46,15 +46,15 @@ export default {
       isbn13: '9781449320195',
       price: '$10.50',
       image: 'https://itbook.store/img/books/9781449320195.png',
-      url: 'https://itbook.store/books/9781449320195'
+      url: 'https://itbook.store/books/9781449320195',
     },
     {
       title: 'Learning JavaScript Design Patterns',
-      subtitle: 'A JavaScript and jQuery Developer\'s Guide',
+      subtitle: "A JavaScript and jQuery Developer's Guide",
       isbn13: '9781449331818',
       price: '$31.21',
       image: 'https://itbook.store/img/books/9781449331818.png',
-      url: 'https://itbook.store/books/9781449331818'
+      url: 'https://itbook.store/books/9781449331818',
     },
     {
       title: 'The Problem with Native JavaScript APIs',
@@ -62,7 +62,7 @@ export default {
       isbn13: '9781449339951',
       price: '$0.00',
       image: 'https://itbook.store/img/books/9781449339951.png',
-      url: 'https://itbook.store/books/9781449339951'
+      url: 'https://itbook.store/books/9781449339951',
     },
     {
       title: 'JavaScript Enlightenment',
@@ -70,7 +70,7 @@ export default {
       isbn13: '9781449342883',
       price: '$9.93',
       image: 'https://itbook.store/img/books/9781449342883.png',
-      url: 'https://itbook.store/books/9781449342883'
+      url: 'https://itbook.store/books/9781449342883',
     },
     {
       title: 'JavaScript Testing with Jasmine',
@@ -78,7 +78,7 @@ export default {
       isbn13: '9781449356378',
       price: '$10.25',
       image: 'https://itbook.store/img/books/9781449356378.png',
-      url: 'https://itbook.store/books/9781449356378'
-    }
-  ]
-}
+      url: 'https://itbook.store/books/9781449356378',
+    },
+  ],
+};
