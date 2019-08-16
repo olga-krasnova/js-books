@@ -3,16 +3,13 @@ import { Route, Switch } from 'react-router-dom';
 import HomePage from './components/pages/HomePage';
 import CartPage from './components/pages/CartPage';
 
-const Index = () => <HomePage />;
-const Cart = () => <CartPage />;
-
 const App = () => (
-  <div>
+  <main>
     <Switch>
-      <Route exact path="/" component={Index} />
-      <Route path="/cart" component={Cart} />
+      <Route exact path="/" component={HomePage} />
+      <Route path="/cart" component={CartPage} />
     </Switch>
-  </div>
+  </main>
 );
 
 export default App;
