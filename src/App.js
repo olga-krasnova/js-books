@@ -1,17 +1,18 @@
 import React from 'react';
-import ApiService from './services/ApiService';
-import BookStoreService from './services/BookstoreService';
+import { Route, Switch } from 'react-router-dom';
+import HomePage from './components/pages/HomePage';
+import CartPage from './components/pages/CartPage';
 
-const apiService = new ApiService();
+const Index = () => <HomePage />;
+const Cart = () => <CartPage />;
 
-const getBooks = async () => {
-  const bookStoreService = new BookStoreService(apiService);
-  return await bookStoreService.fetchBooks().then(res => res);
-};
-
-const App = () => {
-  console.log(getBooks());
-  return <div className="App">Hello</div>;
-};
+const App = () => (
+  <div>
+    <Switch>
+      <Route exact path="/" component={Index} />
+      <Route path="/cart" component={Cart} />
+    </Switch>
+  </div>
+);
 
 export default App;

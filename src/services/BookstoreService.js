@@ -1,4 +1,4 @@
-const api_url = '/search/javascript';
+const apiUrl = '/search/javascript';
 
 export default class BookstoreService {
   constructor(apiService) {
@@ -7,7 +7,7 @@ export default class BookstoreService {
 
   async fetchBooks() {
     const result = await this.apiService
-      .get(api_url)
+      .get(apiUrl)
       .then(response => response);
 
     return result.data.books;
