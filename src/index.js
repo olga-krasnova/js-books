@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
+import GlobalStyle from './styles-config/globalStyle';
 import ApiService from './services/ApiService';
 import ApiServiceContext from './components/contexts/ApiServiceContext';
 import App from './App';
@@ -16,6 +17,7 @@ ReactDOM.render(
     <ErrorBoundry>
       <ApiServiceContext.Provider value={apiService}>
         <Router>
+          <GlobalStyle />
           <App />
         </Router>
       </ApiServiceContext.Provider>

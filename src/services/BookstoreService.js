@@ -1,4 +1,4 @@
-const apiUrl = '/search/javascript';
+export const apiUrl = '/search/javascript';
 
 export default class BookstoreService {
   constructor(apiService) {
