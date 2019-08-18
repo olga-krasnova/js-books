@@ -32,18 +32,21 @@ const Price = styled.div`
   font-size: 1.4rem;
 `;
 
-const BookItem = () => {
-  // const { title, author, price, image } = book;
+const BookItem = ({ book, onAddedToCart }) => {
+  const { title, author, price, image } = book;
   return (
     <Item>
       <ImageWrapper>
-        <img src="" alt="Book cover" />
+        <img src={image} alt="Book cover" />
       </ImageWrapper>
       <Details>
-        <Title>title</Title>
-        <div>author</div>
-        <Price>price</Price>
-        <button type="button">
+        <Title>{title}</Title>
+        <div>{author}</div>
+        <Price>{price}</Price>
+        <button
+          type="button"
+          onClick={onAddedToCart}
+        >
           Add to cart
         </button>
       </Details>
