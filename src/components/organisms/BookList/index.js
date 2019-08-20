@@ -26,8 +26,8 @@ const BookList = ({ books, onAddedToCart }) => {
 
 class BookListContainer extends Component {
   componentDidMount() {
-    const { fetchBooks } = this.props;
-    fetchBooks();
+    const { getBooks } = this.props;
+    getBooks();
   }
 
   render() {
@@ -50,7 +50,7 @@ const mapStateToProps = ({ bookList: { books, loading, error } }) => {
 
 const mapDispatchToProps = (dispatch, { bookstoreService }) => {
   return {
-    fetchBooks: fetchBooks(bookstoreService, dispatch),
+    getBooks: fetchBooks(bookstoreService, dispatch),
     onAddedToCart: id => dispatch(bookAddedToCart(id)),
   };
 };

@@ -17,7 +17,7 @@ export default {
       url: 'https://itbook.store/books/9780321832740',
     },
     {
-      title: 'JavaScript: The Good Parts',
+      title: 'JavaScript The Good Parts',
       subtitle: 'Unearthing the Excellence in JavaScript',
       isbn13: '9780596517748',
       price: '$6.68',
