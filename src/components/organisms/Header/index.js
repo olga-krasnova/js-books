@@ -6,18 +6,26 @@ import Logo from '../../atoms/Logo';
 
 const ShopHeader = styled.div`
   border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
 `;
 
 const CartLink = styled.div`
-  align-self: center;
-  font-size: 1.3rem;
-  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: black;
+
+  span {
+    margin-left: 5px;
+    color: #d21115;
+  }
 `;
 
-const Header = ({ totalSum, totalItems }) => {
+const Header = ({ totalItems }) => {
   return (
     <ShopHeader>
       <Link to="/">
@@ -25,8 +33,8 @@ const Header = ({ totalSum, totalItems }) => {
       </Link>
       <Link to="/cart">
         <CartLink>
-          <i />
-          {totalItems} items (${totalSum})
+          <i className="material-icons">shopping_cart</i>
+          <span>{totalItems > 0 ? `${totalItems}` : ''}</span>
         </CartLink>
       </Link>
     </ShopHeader>

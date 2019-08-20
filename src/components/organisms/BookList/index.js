@@ -8,9 +8,7 @@ import Spinner from '../../atoms/Spinner';
 import ErrorIndicator from '../../atoms/ErrorIndicator';
 import BookItem from '../../molecules/BookItem';
 
-const List = styled.ul`
-  list-style: none;
-`;
+const List = styled.ul``;
 
 const BookList = ({ books, onAddedToCart }) => {
   return (

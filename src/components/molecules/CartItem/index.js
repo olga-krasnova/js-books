@@ -2,8 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
-  margin-left: 5px;
+  margin-right: 5px;
   margin-top: 5px;
+  outline none;
+  border: 0;
+  background: transparent;
+  
+  &:hover {
+    i {
+      color: #000;
+    }
+  }
+  
+  i {
+    transition: all 0.5s ease;
+    color: #757373;
+  }
 `;
 
 const CartItem = props => {

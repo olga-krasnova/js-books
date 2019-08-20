@@ -58,19 +58,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
   
-  button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: .9375rem 1.25rem .8125rem;
-    line-height: 1.2;
-    overflow: hidden;
-    transition: all 0.5s ease;
-    font-size: 0.8125rem;
-    border: none;
-    font-weight: 600;
-    outline: 0;
-    text-transform: uppercase;
+  ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 `;
 

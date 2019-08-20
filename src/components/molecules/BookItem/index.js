@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Button from '../../atoms/Button';
 
 const Item = styled.div`
   display: flex;
@@ -10,7 +11,7 @@ const ImageWrapper = styled.div`
   flex-shrink: 0;
   width: 120px;
   margin-right: 30px;
-  
+
   img {
     max-width: 100%;
   }
@@ -19,17 +20,20 @@ const ImageWrapper = styled.div`
 const Details = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding-bottom: 10px;
   align-items: flex-start;
+  margin-top: 18px;
 `;
 
 const Title = styled.span`
-  font-size: 1.2rem;
+  font-size: 18px;
+  font-weight: 500;
 `;
 
 const Price = styled.div`
-  font-size: 1.4rem;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #d21115;
 `;
 
 const BookItem = ({ book, onAddedToCart }) => {
@@ -43,15 +47,10 @@ const BookItem = ({ book, onAddedToCart }) => {
         <Title>{title}</Title>
         <div>{author}</div>
         <Price>{price}</Price>
-        <button
-          type="button"
-          onClick={onAddedToCart}
-        >
-          Add to cart
-        </button>
+        <Button type="button" text="Add to cart" onClick={onAddedToCart} />
       </Details>
     </Item>
-  )
+  );
 };
 
 export default BookItem;
