@@ -13,10 +13,9 @@ const booksRequested = () => {
   };
 };
 
-const booksError = error => {
+const booksError = () => {
   return {
-    type: types.FETCH_BOOKS_FAILURE,
-    payload: error,
+    type: types.FETCH_BOOKS_FAILURE
   };
 };
 
@@ -46,5 +45,8 @@ export const fetchBooks = (bookstoreService, dispatch) => () => {
   bookstoreService
     .fetchBooks()
     .then(data => dispatch(booksLoaded(data.data.books)))
-    .catch(error => dispatch(booksError(error)));
+    .catch(error => {
+      console.log(error);
+      dispatch(booksError());
+    });
 };

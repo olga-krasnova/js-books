@@ -1,5 +1,13 @@
 import * as types from '../actionTypes';
 
+const initialState = {
+  shoppingCart: {
+    cartItems: [],
+    orderTotal: 0,
+    itemsTotal: 0,
+  }
+};
+
 const updateCartItems = (cartItems, item, idx) => {
   if (item.count === 0) {
     return [...cartItems.slice(0, idx), ...cartItems.slice(idx + 1)];
@@ -59,15 +67,7 @@ const updateOrder = (state, bookId, quantity) => {
   };
 };
 
-const updateShoppingCart = (state, action) => {
-  if (state === undefined) {
-    return {
-      cartItems: [],
-      orderTotal: 0,
-      itemsTotal: 0,
-    };
-  }
-
+const updateShoppingCart = (state = initialState, action) => {
   switch (action.type) {
     case types.BOOK_ADDED_TO_CART:
       return updateOrder(state, action.payload, 1);
