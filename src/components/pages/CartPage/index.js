@@ -1,12 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import MainTemplate from '../../templates/MainTemplate';
+import CartTable from '../../organisms/CartTable';
 
 const CartPage = () => {
   return (
-    <Fragment>
-      <MainTemplate />
-    </Fragment>
-  )
+    <>
+      <MainTemplate>
+        <CartTable />
+      </MainTemplate>
+    </>
+  );
 };
 
 export default CartPage;

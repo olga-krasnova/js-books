@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Logo from '../../atoms/Logo';
@@ -32,4 +33,11 @@ const Header = ({ totalSum, totalItems }) => {
   );
 };
 
-export default Header;
+const mapStateToProps = ({ shoppingCart: { orderTotal, itemsTotal } }) => {
+  return {
+    totalSum: orderTotal,
+    totalItems: itemsTotal,
+  };
+};
+
+export default connect(mapStateToProps)(Header);

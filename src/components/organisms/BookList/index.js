@@ -13,22 +13,17 @@ const List = styled.ul`
 `;
 
 const BookList = ({ books, onAddedToCart }) => {
-
   return (
     <List>
-      {books.map((book) => {
-          return (
-            <li key={book.isbn13}>
-              <BookItem
-                book={book}
-                onAddedToCart={() => onAddedToCart(book.isbn13)}
-              />
-            </li>
-          )
-        })
-      }
+      {books.map(book => {
+        return (
+          <li key={book.isbn13}>
+            <BookItem book={book} onAddedToCart={() => onAddedToCart(book.isbn13)} />
+          </li>
+        );
+      })}
     </List>
-  )
+  );
 };
 
 class BookListContainer extends Component {
@@ -37,31 +32,34 @@ class BookListContainer extends Component {
     fetchBooks();
   }
 
-  render () {
-    const {books, loading, error, onAddedToCart} = this.props;
-    if(loading) {
+  render() {
+    const { books, loading, error, onAddedToCart } = this.props;
+    if (loading) {
       return <Spinner />;
     }
 
-    if(error) {
+    if (error) {
       return <ErrorIndicator />;
     }
 
-    return <BookList books={books.data.books} onAddedToCart={onAddedToCart} />
+    return <BookList books={books} onAddedToCart={onAddedToCart} />;
   }
 }
 
-const mapStateToProps = ({ bookList: {books, loading, error} }) => {
-  return {books, loading, error};
+const mapStateToProps = ({ bookList: { books, loading, error } }) => {
+  return { books, loading, error };
 };
 
-const mapDispatchToProps = (dispatch, {bookstoreService}) => {
+const mapDispatchToProps = (dispatch, { bookstoreService }) => {
   return {
     fetchBooks: fetchBooks(bookstoreService, dispatch),
-    onAddedToCart: (id) => dispatch(bookAddedToCart(id))
-  }
+    onAddedToCart: id => dispatch(bookAddedToCart(id)),
+  };
 };
 
 export default WithBookstoreService()(
-  connect(mapStateToProps, mapDispatchToProps)(BookListContainer)
+  connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(BookListContainer),
 );
