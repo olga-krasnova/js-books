@@ -15,7 +15,7 @@ const booksRequested = () => {
 
 const booksError = () => {
   return {
-    type: types.FETCH_BOOKS_FAILURE
+    type: types.FETCH_BOOKS_FAILURE,
   };
 };
 
@@ -40,13 +40,19 @@ export const allBooksRemovedFromCart = bookId => {
   };
 };
 
-export const fetchBooks = (bookstoreService, dispatch) => () => {
-  dispatch(booksRequested());
-  bookstoreService
-    .fetchBooks()
-    .then(data => dispatch(booksLoaded(data.data.books)))
-    .catch(error => {
-      console.log(error);
-      dispatch(booksError());
-    });
+export const fetchBooks = bookstoreService => {
+  return dispatch => {
+    dispatch(booksRequested());
+    return bookstoreService
+      .fetchBooks()
+      .then(res => {
+        const bookList = res.data.books;
+        dispatch(booksLoaded(bookList));
+        return bookList;
+      })
+      .catch(error => {
+        dispatch(booksError());
+        return error;
+      });
+  };
 };
