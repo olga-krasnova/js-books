@@ -16,7 +16,7 @@ describe('fetchBooks actions', () => {
     const mockApiServiceGet = jest.fn(
       () =>
         new Promise(resolve => {
-          resolve(bookResponse);
+          resolve({ data: { books: bookResponse } });
         }),
     );
 

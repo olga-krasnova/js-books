@@ -1,14 +1,6 @@
 import * as types from '../actionTypes';
 
-const initialState = {
-  shoppingCart: {
-    cartItems: [],
-    orderTotal: 0,
-    itemsTotal: 0,
-  }
-};
-
-const updateCartItems = (cartItems, item, idx) => {
+export const updateCartItems = (cartItems, item, idx) => {
   if (item.count === 0) {
     return [...cartItems.slice(0, idx), ...cartItems.slice(idx + 1)];
   }
@@ -20,7 +12,7 @@ const updateCartItems = (cartItems, item, idx) => {
   return [...cartItems.slice(0, idx), item, ...cartItems.slice(idx + 1)];
 };
 
-const updateCartItem = (book, item = {}, quantity) => {
+export const updateCartItem = (book, item = {}, quantity) => {
   const { id = book.isbn13, count = 0, title = book.title, total = 0 } = item;
 
   const totalPrice = book.price.slice(1);
@@ -33,7 +25,7 @@ const updateCartItem = (book, item = {}, quantity) => {
   };
 };
 
-const updateCartLength = cartItems => {
+export const updateCartLength = cartItems => {
   let res = 0;
   cartItems.forEach(item => {
     res += item.count;
@@ -41,7 +33,7 @@ const updateCartLength = cartItems => {
   return res;
 };
 
-const updateCartTotalSum = cartItems => {
+export const updateCartTotalSum = cartItems => {
   let res = 0;
   cartItems.forEach(item => {
     res += item.total;
@@ -67,7 +59,14 @@ const updateOrder = (state, bookId, quantity) => {
   };
 };
 
-const updateShoppingCart = (state = initialState, action) => {
+const updateShoppingCart = (state, action) => {
+  if (state === undefined) {
+    return {
+      cartItems: [],
+      orderTotal: 0,
+      itemsTotal: 0,
+    };
+  }
   switch (action.type) {
     case types.BOOK_ADDED_TO_CART:
       return updateOrder(state, action.payload, 1);

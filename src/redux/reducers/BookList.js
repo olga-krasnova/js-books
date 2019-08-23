@@ -1,34 +1,34 @@
 import * as types from '../actionTypes';
 
-const initialState = {
-  bookList: {
-    books: [],
-    loading: false,
-    error: null,
+const updateBookList = (state, action) => {
+  if (state === undefined) {
+    return {
+      books: [],
+      loading: false,
+      error: null,
+    };
   }
-};
 
-const updateBookList = (state = initialState, action) => {
   switch (action.type) {
     case types.FETCH_BOOKS_REQUEST:
       return {
         books: [],
         loading: true,
-        error: null
+        error: null,
       };
 
     case types.FETCH_BOOKS_SUCCESS:
       return {
         books: action.payload,
         loading: false,
-        error: null
+        error: null,
       };
 
     case types.FETCH_BOOKS_FAILURE:
       return {
         books: [],
         loading: false,
-        error: true
+        error: true,
       };
 
     default:
