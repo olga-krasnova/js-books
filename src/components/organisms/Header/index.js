@@ -41,10 +41,9 @@ const Header = ({ totalItems }) => {
   );
 };
 
-const mapStateToProps = ({ shoppingCart: { orderTotal, itemsTotal } }) => {
+export const mapStateToProps = ({ shoppingCart: { itemsTotal } }) => {
   return {
-    totalSum: orderTotal,
-    totalItems: itemsTotal,
+    totalItems: itemsTotal
   };
 };
 

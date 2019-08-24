@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import { connect } from 'react-redux';
 import WithBookstoreService from '../../hoc/withBookstoreService';
 import { fetchBooks, bookAddedToCart } from '../../../redux/actions';
@@ -8,11 +7,9 @@ import Spinner from '../../atoms/Spinner';
 import ErrorIndicator from '../../atoms/ErrorIndicator';
 import BookItem from '../../molecules/BookItem';
 
-const List = styled.ul``;
-
 const BookList = ({ books, onAddedToCart }) => {
   return (
-    <List>
+    <ul>
       {books.map(book => {
         return (
           <li key={book.isbn13}>
@@ -20,11 +17,11 @@ const BookList = ({ books, onAddedToCart }) => {
           </li>
         );
       })}
-    </List>
+    </ul>
   );
 };
 
-class BookListContainer extends Component {
+export class BookListContainer extends Component {
   componentDidMount() {
     const { getBooks } = this.props;
     getBooks();
@@ -44,11 +41,11 @@ class BookListContainer extends Component {
   }
 }
 
-const mapStateToProps = ({ bookList: { books, loading, error } }) => {
+export const mapStateToProps = ({ bookList: { books, loading, error } }) => {
   return { books, loading, error };
 };
 
-const mapDispatchToProps = (dispatch, { bookstoreService }) => {
+export const mapDispatchToProps = (dispatch, { bookstoreService }) => {
   return {
     getBooks: () => dispatch(fetchBooks(bookstoreService)),
     onAddedToCart: id => dispatch(bookAddedToCart(id)),

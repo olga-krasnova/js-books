@@ -41,7 +41,7 @@ export const updateCartTotalSum = cartItems => {
   return +res.toFixed(10);
 };
 
-const updateOrder = (state, bookId, quantity) => {
+export const updateOrder = (state, bookId, quantity) => {
   const {
     bookList: { books },
     shoppingCart: { cartItems },

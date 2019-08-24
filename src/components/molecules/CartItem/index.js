@@ -31,13 +31,13 @@ const CartItem = props => {
       <td>{count}</td>
       <td>${total}</td>
       <td>
-        <Button type="button" onClick={() => onDelete(id)}>
+        <Button type="button" className="delete" onClick={() => onDelete(id)}>
           <i className="material-icons">delete_outline</i>
         </Button>
-        <Button type="button" onClick={() => onIncrease(id)}>
+        <Button type="button" className="increase" onClick={() => onIncrease(id)}>
           <i className="material-icons">add_circle_outline</i>
         </Button>
-        <Button type="button" onClick={() => onDecrease(id)}>
+        <Button type="button" className="decrease" onClick={() => onDecrease(id)}>
           <i className="material-icons">remove_circle_outline</i>
         </Button>
       </td>
