@@ -1,32 +1,8 @@
 import updateShoppingCart from './ShoppingCart';
 import bookResponse from '../../__mocks__/bookResponse';
+import * as types from '../actionTypes';
 
 describe('ShoppingCart reducer', () => {
-  let mockUpdateOrder;
-
-  const state = {
-    bookList: {
-      books: bookResponse,
-      loading: false,
-      error: null,
-    },
-    shoppingCart: {
-      cartItems: [],
-      orderTotal: 0,
-      itemsTotal: 0,
-    }
-  };
-
-  beforeEach(() => {
-    jest.resetModules();
-
-    mockUpdateOrder = jest.fn(state, 9781430259442, 1);
-
-    jest.mock('./ShoppingCart', () => ({
-      updateOrder: mockUpdateOrder
-    }));
-  });
-
   describe('Update ShoppingCart', () => {
     const initialState = {
       cartItems: [],
@@ -40,31 +16,103 @@ describe('ShoppingCart reducer', () => {
 
     it('should handle BOOK_ADDED_TO_CART', () => {
       // Arrange
-      // const actualState = {
-      //   cartItems: [
-      //     {
-      //       title: 'JavaScript Creativity',
-      //       subtitle: 'Exploring the Modern Capabilities of JavaScript and HTML5',
-      //       isbn13: '9781430259442',
-      //       price: '$37.95',
-      //       image: 'https://itbook.store/img/books/9781430259442.png',
-      //       url: 'https://itbook.store/books/9781430259442',
-      //     },
-      //   ],
-      //   orderTotal: '$75.9',
-      //   itemsTotal: 2,
-      // };
-      //
-      // const startAction = {
-      //   type: types.BOOK_ADDED_TO_CART,
-      // };
+      const actualState = {
+        cartItems: [
+          {
+            count: 1,
+            id: bookResponse[2].isbn13,
+            title: bookResponse[2].title,
+            total: 6.68,
+          },
+        ],
+        orderTotal: 6.68,
+        itemsTotal: 1,
+      };
 
-      // const mockUpdateOrder = jest.fn(state, 9781430259442, 1);
+      const expectedState = {
+        bookList: { books: bookResponse },
+        shoppingCart: { cartItems: [] },
+      };
+
+      const expectedAction = {
+        type: types.BOOK_ADDED_TO_CART,
+        payload: bookResponse[2].isbn13,
+      };
+
       // Act
 
       // Assert
-      // expect(mockUpdateOrder).toHaveBeenCalled();
-      // expect(updateShoppingCart({}, startAction)).toEqual(actualState);
+      expect(updateShoppingCart(expectedState, expectedAction)).toEqual(actualState);
+    });
+
+    it('should handle BOOK_REMOVED_FROM_CART', () => {
+      // Arrange
+      const expectedState = {
+        bookList: { books: bookResponse },
+        shoppingCart: {
+          cartItems: [
+            {
+              count: 1,
+              id: bookResponse[2].isbn13,
+              title: bookResponse[2].title,
+              total: 6.68,
+            },
+          ],
+          orderTotal: 6.68,
+          itemsTotal: 1,
+        },
+      };
+
+      const expectedAction = {
+        type: types.BOOK_REMOVED_FROM_CART,
+        payload: bookResponse[2].isbn13,
+      };
+
+      const actualState = {
+        cartItems: [],
+        orderTotal: 0,
+        itemsTotal: 0,
+      };
+
+      // Act
+
+      // Assert
+      expect(updateShoppingCart(expectedState, expectedAction)).toEqual(actualState);
+    });
+
+    it('should handle ALL_BOOKS_REMOVED_FROM_CART', () => {
+      // Arrange
+      const expectedState = {
+        bookList: { books: bookResponse },
+        shoppingCart: {
+          cartItems: [
+            {
+              count: 2,
+              id: bookResponse[2].isbn13,
+              title: bookResponse[2].title,
+              total: 6.68,
+            },
+          ],
+          orderTotal: 13.36,
+          itemsTotal: 2,
+        },
+      };
+
+      const expectedAction = {
+        type: types.ALL_BOOKS_REMOVED_FROM_CART,
+        payload: bookResponse[2].isbn13,
+      };
+
+      const actualState = {
+        cartItems: [],
+        orderTotal: 0,
+        itemsTotal: 0,
+      };
+
+      // Act
+
+      // Assert
+      expect(updateShoppingCart(expectedState, expectedAction)).toEqual(actualState);
     });
   });
 });

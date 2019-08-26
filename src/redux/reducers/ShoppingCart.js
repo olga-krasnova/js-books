@@ -1,6 +1,6 @@
 import * as types from '../actionTypes';
 
-export const updateCartItems = (cartItems, item, idx) => {
+const updateCartItems = (cartItems, item, idx) => {
   if (item.count === 0) {
     return [...cartItems.slice(0, idx), ...cartItems.slice(idx + 1)];
   }
@@ -12,7 +12,7 @@ export const updateCartItems = (cartItems, item, idx) => {
   return [...cartItems.slice(0, idx), item, ...cartItems.slice(idx + 1)];
 };
 
-export const updateCartItem = (book, item = {}, quantity) => {
+const updateCartItem = (book, item = {}, quantity) => {
   const { id = book.isbn13, count = 0, title = book.title, total = 0 } = item;
 
   const totalPrice = book.price.slice(1);
@@ -25,7 +25,7 @@ export const updateCartItem = (book, item = {}, quantity) => {
   };
 };
 
-export const updateCartLength = cartItems => {
+const updateCartLength = cartItems => {
   let res = 0;
   cartItems.forEach(item => {
     res += item.count;
@@ -33,7 +33,7 @@ export const updateCartLength = cartItems => {
   return res;
 };
 
-export const updateCartTotalSum = cartItems => {
+const updateCartTotalSum = cartItems => {
   let res = 0;
   cartItems.forEach(item => {
     res += item.total;
@@ -41,7 +41,7 @@ export const updateCartTotalSum = cartItems => {
   return +res.toFixed(10);
 };
 
-export const updateOrder = (state, bookId, quantity) => {
+const updateOrder = (state, bookId, quantity) => {
   const {
     bookList: { books },
     shoppingCart: { cartItems },

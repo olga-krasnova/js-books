@@ -36,7 +36,7 @@ const Summary = styled.div`
 
 const CartTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
   return (
-    <CartWrapper>
+    <CartWrapper data-testid="test-cart-table">
       <h2>Your Order</h2>
       <Table>
         <thead>
