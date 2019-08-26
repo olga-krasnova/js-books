@@ -5,7 +5,7 @@ const updateBookList = (state, action) => {
     return {
       books: [],
       loading: false,
-      error: null,
+      error: false,
     };
   }
 
@@ -14,14 +14,14 @@ const updateBookList = (state, action) => {
       return {
         books: [],
         loading: true,
-        error: null,
+        error: false,
       };
 
     case types.FETCH_BOOKS_SUCCESS:
       return {
         books: action.payload,
         loading: false,
-        error: null,
+        error: false,
       };
 
     case types.FETCH_BOOKS_FAILURE:
