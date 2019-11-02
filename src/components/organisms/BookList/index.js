@@ -9,7 +9,7 @@ import BookItem from '../../molecules/BookItem';
 
 const BookList = ({ books, onAddedToCart }) => {
   return (
-    <ul>
+    <ul data-testid="test-book-list">
       {books.map(book => {
         return (
           <li key={book.isbn13}>

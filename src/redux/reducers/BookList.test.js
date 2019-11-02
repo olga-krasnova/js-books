@@ -6,7 +6,7 @@ describe('BookList reducer', () => {
   const initialState = {
     books: [],
     loading: false,
-    error: null,
+    error: false,
   };
 
   it('should return the initial state', () => {
@@ -18,11 +18,11 @@ describe('BookList reducer', () => {
     const actualState = {
       books: [],
       loading: true,
-      error: null,
+      error: false,
     };
 
     const startAction = {
-      type: types.FETCH_BOOKS_REQUEST
+      type: types.FETCH_BOOKS_REQUEST,
     };
     // Act
     // Assert
@@ -34,12 +34,12 @@ describe('BookList reducer', () => {
     const actualState = {
       books: bookResponse,
       loading: false,
-      error: null,
+      error: false,
     };
 
     const successAction = {
       type: types.FETCH_BOOKS_SUCCESS,
-      payload: bookResponse
+      payload: bookResponse,
     };
 
     // Act
@@ -56,7 +56,7 @@ describe('BookList reducer', () => {
     };
 
     const failAction = {
-      type: types.FETCH_BOOKS_FAILURE
+      type: types.FETCH_BOOKS_FAILURE,
     };
 
     // Act

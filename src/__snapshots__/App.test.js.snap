@@ -1,0 +1,399 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Router test should show BookList on home page 1`] = `
+<ul
+  data-testid="test-book-list"
+>
+  <li>
+    <div
+      class="sc-gzVnrw hnuYoW"
+    >
+      <div
+        class="sc-htoDjs cEeFSy"
+      >
+        <img
+          alt="Book cover"
+          src="https://itbook.store/img/books/9780321812186.png"
+        />
+      </div>
+      <div
+        class="sc-dnqmqq bhqlKj"
+      >
+        <span
+          class="sc-iwsKbI fJtlAM"
+        >
+          Effective JavaScript
+        </span>
+        <div />
+        <div
+          class="sc-gZMcBi cZDwvA"
+        >
+          $21.99
+        </div>
+        <button
+          class="sc-bZQynM dlVnGl"
+          type="button"
+        >
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div
+      class="sc-gzVnrw hnuYoW"
+    >
+      <div
+        class="sc-htoDjs cEeFSy"
+      >
+        <img
+          alt="Book cover"
+          src="https://itbook.store/img/books/9780321832740.png"
+        />
+      </div>
+      <div
+        class="sc-dnqmqq bhqlKj"
+      >
+        <span
+          class="sc-iwsKbI fJtlAM"
+        >
+          Learning JavaScript
+        </span>
+        <div />
+        <div
+          class="sc-gZMcBi cZDwvA"
+        >
+          $8.99
+        </div>
+        <button
+          class="sc-bZQynM dlVnGl"
+          type="button"
+        >
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div
+      class="sc-gzVnrw hnuYoW"
+    >
+      <div
+        class="sc-htoDjs cEeFSy"
+      >
+        <img
+          alt="Book cover"
+          src="https://itbook.store/img/books/9780596517748.png"
+        />
+      </div>
+      <div
+        class="sc-dnqmqq bhqlKj"
+      >
+        <span
+          class="sc-iwsKbI fJtlAM"
+        >
+          JavaScript The Good Parts
+        </span>
+        <div />
+        <div
+          class="sc-gZMcBi cZDwvA"
+        >
+          $6.68
+        </div>
+        <button
+          class="sc-bZQynM dlVnGl"
+          type="button"
+        >
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div
+      class="sc-gzVnrw hnuYoW"
+    >
+      <div
+        class="sc-htoDjs cEeFSy"
+      >
+        <img
+          alt="Book cover"
+          src="https://itbook.store/img/books/9780596527747.png"
+        />
+      </div>
+      <div
+        class="sc-dnqmqq bhqlKj"
+      >
+        <span
+          class="sc-iwsKbI fJtlAM"
+        >
+          Head First JavaScript
+        </span>
+        <div />
+        <div
+          class="sc-gZMcBi cZDwvA"
+        >
+          $5.99
+        </div>
+        <button
+          class="sc-bZQynM dlVnGl"
+          type="button"
+        >
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div
+      class="sc-gzVnrw hnuYoW"
+    >
+      <div
+        class="sc-htoDjs cEeFSy"
+      >
+        <img
+          alt="Book cover"
+          src="https://itbook.store/img/books/9781430259442.png"
+        />
+      </div>
+      <div
+        class="sc-dnqmqq bhqlKj"
+      >
+        <span
+          class="sc-iwsKbI fJtlAM"
+        >
+          JavaScript Creativity
+        </span>
+        <div />
+        <div
+          class="sc-gZMcBi cZDwvA"
+        >
+          $37.95
+        </div>
+        <button
+          class="sc-bZQynM dlVnGl"
+          type="button"
+        >
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div
+      class="sc-gzVnrw hnuYoW"
+    >
+      <div
+        class="sc-htoDjs cEeFSy"
+      >
+        <img
+          alt="Book cover"
+          src="https://itbook.store/img/books/9781449320195.png"
+        />
+      </div>
+      <div
+        class="sc-dnqmqq bhqlKj"
+      >
+        <span
+          class="sc-iwsKbI fJtlAM"
+        >
+          JavaScript for PHP Developers
+        </span>
+        <div />
+        <div
+          class="sc-gZMcBi cZDwvA"
+        >
+          $10.50
+        </div>
+        <button
+          class="sc-bZQynM dlVnGl"
+          type="button"
+        >
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div
+      class="sc-gzVnrw hnuYoW"
+    >
+      <div
+        class="sc-htoDjs cEeFSy"
+      >
+        <img
+          alt="Book cover"
+          src="https://itbook.store/img/books/9781449331818.png"
+        />
+      </div>
+      <div
+        class="sc-dnqmqq bhqlKj"
+      >
+        <span
+          class="sc-iwsKbI fJtlAM"
+        >
+          Learning JavaScript Design Patterns
+        </span>
+        <div />
+        <div
+          class="sc-gZMcBi cZDwvA"
+        >
+          $31.21
+        </div>
+        <button
+          class="sc-bZQynM dlVnGl"
+          type="button"
+        >
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div
+      class="sc-gzVnrw hnuYoW"
+    >
+      <div
+        class="sc-htoDjs cEeFSy"
+      >
+        <img
+          alt="Book cover"
+          src="https://itbook.store/img/books/9781449339951.png"
+        />
+      </div>
+      <div
+        class="sc-dnqmqq bhqlKj"
+      >
+        <span
+          class="sc-iwsKbI fJtlAM"
+        >
+          The Problem with Native JavaScript APIs
+        </span>
+        <div />
+        <div
+          class="sc-gZMcBi cZDwvA"
+        >
+          $0.00
+        </div>
+        <button
+          class="sc-bZQynM dlVnGl"
+          type="button"
+        >
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div
+      class="sc-gzVnrw hnuYoW"
+    >
+      <div
+        class="sc-htoDjs cEeFSy"
+      >
+        <img
+          alt="Book cover"
+          src="https://itbook.store/img/books/9781449342883.png"
+        />
+      </div>
+      <div
+        class="sc-dnqmqq bhqlKj"
+      >
+        <span
+          class="sc-iwsKbI fJtlAM"
+        >
+          JavaScript Enlightenment
+        </span>
+        <div />
+        <div
+          class="sc-gZMcBi cZDwvA"
+        >
+          $9.93
+        </div>
+        <button
+          class="sc-bZQynM dlVnGl"
+          type="button"
+        >
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div
+      class="sc-gzVnrw hnuYoW"
+    >
+      <div
+        class="sc-htoDjs cEeFSy"
+      >
+        <img
+          alt="Book cover"
+          src="https://itbook.store/img/books/9781449356378.png"
+        />
+      </div>
+      <div
+        class="sc-dnqmqq bhqlKj"
+      >
+        <span
+          class="sc-iwsKbI fJtlAM"
+        >
+          JavaScript Testing with Jasmine
+        </span>
+        <div />
+        <div
+          class="sc-gZMcBi cZDwvA"
+        >
+          $10.25
+        </div>
+        <button
+          class="sc-bZQynM dlVnGl"
+          type="button"
+        >
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`App Router test should show ShoppingCartTable on /cart 1`] = `
+<div
+  class="sc-VigVT jShrPV"
+  data-testid="test-cart-table"
+>
+  <h2>
+    Your Order
+  </h2>
+  <table
+    class="sc-jTzLTM dyJznJ"
+  >
+    <thead>
+      <tr>
+        <th>
+          #
+        </th>
+        <th>
+          Item
+        </th>
+        <th>
+          Count
+        </th>
+        <th>
+          Price
+        </th>
+        <th>
+          Action
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <div
+    class="sc-fjdhpX cFfhmr"
+  >
+    Total: $
+    0
+  </div>
+</div>
+`;

@@ -11,7 +11,7 @@ describe('BookList', () => {
 
   beforeEach(() => {
     const props = {
-      getBooks: jest.fn()
+      getBooks: jest.fn(),
     };
     BookListContainerComponent = shallow(<BookListContainer {...props} />);
   });
@@ -26,14 +26,14 @@ describe('BookList', () => {
     const expectedState = {
       books: bookResponse,
       loading: false,
-      error: null
+      error: false,
     };
 
     const initialState = {
       bookList: {
         books: bookResponse,
         loading: false,
-        error: null
+        error: false,
       },
     };
 
@@ -46,7 +46,7 @@ describe('BookList', () => {
     const mockDispatch = jest.fn();
 
     // Act
-    mapDispatchToProps(mockDispatch, {bookstoreService}).getBooks();
+    mapDispatchToProps(mockDispatch, { bookstoreService }).getBooks();
 
     // Assert
     expect(mockDispatch).toHaveBeenCalled();
@@ -57,7 +57,7 @@ describe('BookList', () => {
     const mockDispatch = jest.fn();
 
     // Act
-    mapDispatchToProps(mockDispatch, {bookstoreService}).onAddedToCart();
+    mapDispatchToProps(mockDispatch, { bookstoreService }).onAddedToCart();
 
     // Assert
     expect(mockDispatch).toHaveBeenCalled();
